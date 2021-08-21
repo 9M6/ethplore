@@ -75,9 +75,9 @@ export default class View {
    * Render into console.table the contracts transactions and
    * their unique addresses.
    */
-  contracts() {
+  contract() {
     for (const [block, height] of this.blocks) {
-      console.table(block.contracts().map(tx => {
+      console.table(block.contract().map(tx => {
         const [address, ether] = tx
         return {
           height,
@@ -97,8 +97,7 @@ export default class View {
       "Height": height,
       "Incoming Addr": block.incoming().length,
       "Outgoing Addr": block.outgoing().length,
-      "Total Addr": Object.keys(block.hashmap).length,
-      "Contracts Addr": block.contracts().length,
+      "Contract Addr": block.contract().length,
       "Total Incoming Ether": ethers.utils.formatEther(block.total(txType.incoming)),
       "Total Outgoing Ether": ethers.utils.formatEther(block.total(txType.outgoing)),
     }])

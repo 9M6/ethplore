@@ -82,7 +82,7 @@ import View from "./view"
         view.outgoing()
         break
       case "contract":
-        view.contracts()
+        view.contract()
         break
       case "all":
         view.all()

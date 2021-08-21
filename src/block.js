@@ -97,11 +97,11 @@ export default class Block {
   }
 
   /**
-   * this.contracts method returns a filtered version of
+   * this.contract method returns a filtered version of
    * this.outgoing method that singles out all addresses
    * that are contracts.
    */
-  contracts() {
+  contract() {
     return this.outgoing().filter((tx) => tx[2] && tx)
   }
 
