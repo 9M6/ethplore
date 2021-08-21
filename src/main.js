@@ -92,11 +92,10 @@ import View from "./view"
   }
 
   /**
-   * By default view only the total amounts in case
-   * a txType was not defined
+   * By default 'view' only the total amounts
    */
   for (const [, height] of view.blocks) {
-    view.total(height, txType.incoming)
+    view.total(height)
   }
 
   /**

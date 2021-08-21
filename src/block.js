@@ -34,6 +34,11 @@ export default class Block {
   hashmap = Object.create(null);
 
   /**
+   * An empty property of transactions
+   */
+  transactions = null
+
+  /**
    * Initialize a block and map all transactions into a hashmap,
    * and append the [from, to] as a tuple mapped as [incoming, outgoing].
    *
@@ -42,7 +47,17 @@ export default class Block {
    * @param block
    */
   constructor(block) {
-    block.transactions.map((tx) => {
+    /**
+     * Assign the transactions to the internal
+     * property of the object
+     */
+    this.transactions = block.transactions
+
+    /**
+     * Iterate over all transactions and map
+     * the unique addresses
+     */
+    block.transactions.forEach((tx) => {
       /**
        * Assign tx.from || tx.to into the hashmap and map
        * its transaction value

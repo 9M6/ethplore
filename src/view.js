@@ -95,9 +95,11 @@ export default class View {
     const block = this.blocks[height]
     console.table([{
       "Height": height,
+      "*Transactions":  block.transactions.length,
       "Incoming Addr": block.incoming().length,
       "Outgoing Addr": block.outgoing().length,
       "Contract Addr": block.contract().length,
+      "Total Address": block.size(),
       "Total Incoming Ether": ethers.utils.formatEther(block.total(txType.incoming)),
       "Total Outgoing Ether": ethers.utils.formatEther(block.total(txType.outgoing)),
     }])
