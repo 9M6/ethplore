@@ -9,8 +9,6 @@
  * @returns {boolean}
  */
 export const isNumber = function (number) {
-  if (typeof number !== "string")
-    return false
   return !isNaN(number) && typeof parseFloat(number) === "number";
 }
 

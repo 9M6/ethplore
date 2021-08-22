@@ -57,7 +57,7 @@ export default class Block {
      * Iterate over all transactions and map
      * the unique addresses
      */
-    block.transactions.forEach((tx) => {
+    this.transactions.forEach((tx) => {
       /**
        * Assign tx.from || tx.to into the hashmap and map
        * its transaction value

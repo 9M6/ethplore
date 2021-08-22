@@ -9,7 +9,6 @@ require("dotenv").config();
  */
 import {ethers} from 'ethers'
 import {isNumber, help} from './utils'
-import {txType} from "./block"
 import View from "./view"
 
 
