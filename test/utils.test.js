@@ -3,7 +3,6 @@ import test from 'ava'
 import { isNumber } from "../src/utils"
 
 test('isNumber', t => {
-  console.log(isNumber("1"))
   t.true(isNumber(1))
   t.true(isNumber(100))
   t.true(isNumber(-100))

@@ -47,3 +47,18 @@ Examples:
   ethplore 10 --tx-type incoming                        Will fetch 10 blocks and list up all unique addresses that have received eth
   ethplore 10..20                                       Ethplore will fetch the blocks between the latest 10 to the latest 20 blocks.
 ```
+
+### The tool includes several Environmental Variables:
+
+```bash
+ETH_NETWORK # This is the ethereum endpoint, can be testnet or main net
+INFURA_ID # Infura Project ID
+INFURA_SECRET # Infura Secret ID
+```
+_note I'm using Ethers.js as a main library to connect to ethereum._
+
+### Tests
+
+```bash
+npm test
+```
